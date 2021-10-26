@@ -26,6 +26,26 @@ function move(e){
     })
 }
 
+/* ==== NIGHT MODE ==== */
+
+var cont = 0
+document.getElementById("icone").addEventListener("click", function(){
+    if(cont == 0){
+    document.getElementById("l-header").style.backgroundColor="blue"
+    
+    document.getElementById("home").style.backgroundColor="blue"
+
+    cont = 1;
+    }
+    else{
+    document.getElementById("l-header").style.backgroundColor=""
+    
+    document.getElementById("home").style.backgroundColor=""
+
+    cont = 0
+    }
+})
+
 /*===== GSAP ANIMATION =====*/
 // NAV
 gsap.from('.nav__logo, .nav__toggle', {opacity: 0, duration: 1, delay:2, y: 10})
